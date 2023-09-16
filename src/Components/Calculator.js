@@ -79,7 +79,8 @@ const Calculator = () => {
             </div>
             <div className="message-wrapper">
                 {message !== null && message === "Error!" ? <div className="error-message">{message}</div> : <div className="success-message">{message}</div>}
-                {result !== null && <div className="result">Result : {result}</div>}
+                {result !== null && message === "Error!" && <div className="result">{result}</div>}
+                {result !== null && message === "Success!" && <div className="result">Result : {result}</div>}
             </div>
         </div>
     )
