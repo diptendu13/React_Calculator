@@ -1,13 +1,94 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.calculator-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.calculator-wrapper .calculator {
+  min-width: 489px;
+  min-height: 473px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px 0px;
+  border-radius: 35px;
+  box-shadow: 
+        40px 0 50px 0px #7f79f8,
+        0px 40px 50px 0px #fa80b5,
+        -40px 0px 50px 0px #fa80b5,
+        0 -40px 50px 0px #7f79f8; /* right, bottom, left, top*/
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+input {
+  width: 65%;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 5px 15px;
+  border: 2px solid black;
+}
+
+input::placeholder {
+  color: black;
+
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 65%;
+}
+
+.button-wrapper button {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 700;
+  color: white;
+  background-color: #2a2a2a;
+  border: none;
+}
+
+.message-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.error-message {
+  color: red;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.success-message {
+  color: rgb(86, 215, 50);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.result {
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
 }
